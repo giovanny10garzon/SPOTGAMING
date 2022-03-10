@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ Clientes }}
+{% endblock title %}
+
+
+{% block content %}
+    <h1>{{title}}</h1>
+        <div class="card">
+                <div class="card-header">
+                    Listar Clientes
+                </div>
+                <div class="card-body"
+                     <h4 class="card-title">CLIENTES</h4>
+                        <table table id="linea1" class="box-home-menu-sombra" height="20" width="10%" onmouseover="ccolormin(linea1); return true" onmouseout="ccolormout(linea1,'PR'); return true" bgcolor="#FF9900">
+                            <thead>
+                                <tr>
+                                    <th>Nit</th>
+                                    <th>Inspired</th>
+                                    <th>Nombre</th>
+                                    <th>Razon Social</th>
+                                    <th>Grupo</th>
+                                    <th>Act</th>
+                                    <th>Susp</th>
+                                    <th>Falla</th>
+                                    <th>Visor</th>
+                                    <th>LiqM</th>
+                                    <th>T.Liq</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <!--{% for cliente in clientes %}
+                                            {{cliente.nit}}
+                                        {% endfor %}--!>
+                                    </td>
+                                    <td>
+                                        <!--{% for cliente in clientes %}
+                                            {{cliente.id_inspired}}
+                                        {% endfor %}--!>
+                                    </td>
+                                    <td>
+                                        <!--{% for cliente in clientes %}
+                                            {{cliente.nombre}}
+                                        {% endfor %}--!>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                 </div>
+{% endblock content %}

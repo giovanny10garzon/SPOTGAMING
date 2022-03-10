@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+        <script src="" async defer></script>
+        <title>
+            {% block title %} {% endblock title %}
+        </title>
+    </head>
+    <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" onselectstart="return false;" oncontextmenu="return false;" ondragstart="return false;" onbeforecopy="return false;" onhelp="return false;" bgcolor="#2471A3">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link active" href="#">Inicio</a>
+                <a class="nav-item nav-link active" href="#">Maestro</a>
+                <a class="nav-item nav-link active" href="#">Fallas_soporte</a>
+            </div>
+        </nav>
+    </body>
+    <body>
+        <div class="nav-div">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="active" href="{% url 'index' %}">Index</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            {% block content %}
+            <!--Codigo de las otras paginas-->
+            {% endblock content %}
+        </div>
+        <footer>
+
+        </footer>
+    </body>
+</html>
+
