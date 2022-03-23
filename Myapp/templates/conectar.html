@@ -1,0 +1,69 @@
+{% extends 'menuinstalacion.html' %}
+
+{% block content%}
+  <p></p>
+  <h1> Conectar Maquinas</h1>
+  <p></p>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputnumero" class="form-label">Numero_ASG:</label>
+        <input type="email" class="form-control" id="inputnumero">
+      </div>
+      <div class="col-md-6">
+        <label for="inputfecharegistro" class="form-label">Fecha registro:</label>
+        <input type="password" class="form-control" id="inputfecharegistro">
+      </div>
+      <div class="col-12">
+        <label for="inputcliente" class="form-label">Cliente:</label>
+        <input type="text" class="form-control" id="inputcliente" >
+      </div>
+		<div class="col-md-6">
+        <label for="inputcontacto" class="form-label">Contacto:</label>
+        <input type="text" class="form-control" id="inputcontacto">
+      </div>
+      <div class="col-md-6">
+        <label for="inputfechaascreacion" class="form-label">Fecha creación UMS:</label>
+        <input type="text" class="form-control" id="inputfechaascreacion" >
+      </div>
+      <div class="col-md-6">
+        <label for="inputfechaverificacion" class="form-label">Fecha verificación UMS:</label>
+        <input type="text" class="form-control" id="inputfechaverificacion">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Status:</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <!--<div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>--!>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+		<center>
+			<fieldset id="borde2">
+
+				<input type="submit" value="Reporte">
+				<input type="submit" value="Imprimir">
+				<input type="submit" value="Guardar">
+				<input type="submit" value="Cerrar">
+			</fieldset>
+		</center>
+
+   </form>
+{% endblock%}

@@ -1,0 +1,30 @@
+{% extends 'menuinstalacion.html' %}
+{% load crispy_forms_tags %}
+{% block content%}
+
+
+
+
+  {% if form.errors %}
+      <div class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+  {% endif %}
+  <p></p>
+  <h1> Asignacion Maquinas</h1>
+  <p></p>
+
+  <form action="{% url 'cargarseriales' %}" method="post">
+
+    {% csrf_token %}
+    {% if mensaje %}
+      <div class="alert alert-success" role="alert">
+        Asignación creada!
+      </div>
+    {% endif %}
+
+    {{ form|crispy }}
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+  </form>
+{% endblock%}

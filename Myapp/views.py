@@ -15,3 +15,22 @@ def pagina_inicial(request):
         'title': 'SISTEMA GESTION SG',
         'clientes': clientes
     })
+def menuinstalacion(request):
+
+    return render(request, "menuinstalacion.html")
+
+def asignar(request):
+
+    return render(request, "asignar.html")
+
+def conectar(request):
+
+    return render(request, "conectar.html")
+
+def despachar(request):
+
+    return render(request, "despachar.html")
+
+def instalar(request):
+
+    return render(request, "instalar.html")
