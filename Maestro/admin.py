@@ -7,6 +7,7 @@ class ClienteAdmin(admin.ModelAdmin):
     list_display = ('nit', 'id_inspired', 'nombre', 'razon', 'Grupos', 'activo', 'fallas', 'visor', 'tipo_liquida', 'dia_liquida')
     list_per_page = 35#
     search_fields = ('nombre',)
+    ordering = ['nombre']
 
 class SalaAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')
@@ -23,6 +24,7 @@ class MaquinaAdmin(admin.ModelAdmin):
 class ProovedorAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')
     list_display = ('nit', 'razon_social', 'contacto', 'id_clase')
+
 
 class CausaAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')

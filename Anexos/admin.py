@@ -57,6 +57,14 @@ class GrupoAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')
     list_display = ('id', 'id_codigo', 'nombre', 'activo')
 
+class TransporteAdmin(admin.ModelAdmin):
+    readonly_fields = ('create_at', 'update_at')
+    list_display = ('id', 'id_codigo', 'nombre', 'activo')
+
+class StatusAsginarAdmin(admin.ModelAdmin):
+    readonly_fields = ('create_at', 'update_at')
+    list_display = ('id', 'nombre', 'activo')
+
 admin.site.register(Razos_Social, RazonSocialAdmin)
 admin.site.register(Departamento, DepartamentoAdmin)
 admin.site.register(Ciudad, CiudadAdmin)
@@ -71,4 +79,6 @@ admin.site.register(Condicion, CondicionAdmin)
 admin.site.register(CategoriaFalla, CondicionAdmin)
 admin.site.register(Pieza, PiezaAdmin)
 admin.site.register(Grupos, GrupoAdmin)
+admin.site.register(Transporte, TransporteAdmin)
+admin.site.register(StatusAsignacion, StatusAsginarAdmin)
 

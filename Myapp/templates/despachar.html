@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-6">
         <label for="inputfecharegistro" class="form-label">Fecha registro:</label>
-        <input type="password" class="form-control" id="inputfecharegistro">
+        <input type="date" class="form-control" id="inputfecharegistro">
       </div>
       <div class="col-12">
         <label for="inputcliente" class="form-label">Cliente:</label>
@@ -19,7 +19,7 @@
       </div>
 		<div class="col-md-6">
         <label for="inputfechadespacho" class="form-label">Fecha despacho:</label>
-        <input type="text" class="form-control" id="inputfechadespacho" >
+        <input type="date" class="form-control" id="inputfechadespacho" >
       </div>
 		<div class="col-md-6">
         <label for="inputcontacto" class="form-label">Contacto:</label>
@@ -29,13 +29,25 @@
         <label for="inputconductor" class="form-label">Conductor:</label>
         <input type="text" class="form-control" id="inputconductor">
       </div>
-		<div class="col-md-6">
-        <label for="inputplaca" class="form-label">Forma de envío:</label>
-        <input type="text" class="form-control" id="inputplaca">
+		<div class="col-md-4">
+        <label for="inputformaenvio" class="form-label">Forma de envío:</label>
+        <select id="inputformaenvio"  class="form-select">
+            <option selected>----------------------</option>
+            <option>ESTELAR EXPRESS</option>
+            <option>INTERAPIDISIMO</option>
+            <option>COORDINADORA</option>
+            <option>TRANSPORTE SPOTGAMINGS</option>
+            <option>TRANSPORTE CLIENTE</option>
+            <option>PERSONAL CASINO</option>
+            <option>MENSAJERO CLIENTE</option>
+            <option>ENVIA</option>
+            <option>DHL</option>
+            <option>SERVIENTREGA</option>
+        </select>
       </div>
 		<div class="col-md-6">
-        <label for="inputformaenvio" class="form-label">Placa carro:</label>
-        <input type="text" class="form-control" id="inputformaenvio">
+        <label for="inputplaca" class="form-label">Placa carro:</label>
+        <input type="text" class="form-control" id="inputplaca">
       </div>
 		<div class="col-md-6">
         <label for="inputguia" class="form-label"># Guia de Envío:</label>
@@ -44,8 +56,9 @@
       <div class="col-md-4">
         <label for="inputState" class="form-label">Status:</label>
         <select id="inputState" class="form-select">
-          <option selected>Choose...</option>
-          <option>...</option>
+            <option >CODIGOO IGG</option>
+            <option >ALISTAMIENTO</option>
+            <option >DESPACHADO</option>
         </select>
       </div>
       <!--<div class="col-md-2">
@@ -65,8 +78,6 @@
       </div>--!>
       <p></p>
       <p></p>
-      <p></p>
-      <p></p>
 			<center>
 			<fieldset id="borde2">
 
@@ -78,9 +89,6 @@
 			</fieldset>
 			</center>
 	</form>
-
-
-
 
 	</body>
 

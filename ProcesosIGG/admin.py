@@ -7,7 +7,9 @@ class ContratoAdmin(admin.ModelAdmin):
 
 class AsignacionAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')
-    list_display = ('id', 'numero', 'clientes', 'contacto', 'id_status', 'fecha_asignacion', 'modelo')
+    list_display = ('id', 'numero', 'clientes', 'contacto','stado', 'fecha_asignacion', 'modelo')
+    autocomplete_fields = ['clientes']
+
 
 class DespachoAdmin(admin.ModelAdmin):
     readonly_fields = ('create_at', 'update_at')

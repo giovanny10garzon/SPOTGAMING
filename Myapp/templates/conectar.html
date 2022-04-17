@@ -11,11 +11,11 @@
       </div>
       <div class="col-md-6">
         <label for="inputfecharegistro" class="form-label">Fecha registro:</label>
-        <input type="password" class="form-control" id="inputfecharegistro">
+        <input type="date" class="form-control" id="inputfecharegistro">
       </div>
-      <div class="col-12">
+      <div class="col-6">
         <label for="inputcliente" class="form-label">Cliente:</label>
-        <input type="text" class="form-control" id="inputcliente" >
+        <input type="text" class="form-control" id="inputcliente" value="{{clienteconectar}}">
       </div>
 		<div class="col-md-6">
         <label for="inputcontacto" class="form-label">Contacto:</label>
@@ -23,19 +23,27 @@
       </div>
       <div class="col-md-6">
         <label for="inputfechaascreacion" class="form-label">Fecha creación UMS:</label>
-        <input type="text" class="form-control" id="inputfechaascreacion" >
+        <input type="date" class="form-control" id="inputfechaascreacion" >
       </div>
       <div class="col-md-6">
         <label for="inputfechaverificacion" class="form-label">Fecha verificación UMS:</label>
-        <input type="text" class="form-control" id="inputfechaverificacion">
+        <input type="date" class="form-control" id="inputfechaverificacion">
+      </div>
+      <div class="col-md-6">
+        <label for="inputumscreado" class="form-label">UMS Creado por:	</label>
+        <input type="text" class="form-control" id="inputumscreado">
       </div>
       <div class="col-md-4">
         <label for="inputState" class="form-label">Status:</label>
         <select id="inputState" class="form-select">
-          <option selected>Choose...</option>
-          <option>...</option>
+          <option selected>ASIGNADO</option>
+          <option>CREACION UMS</option>
+          <option>CODIGO IGG</option>
         </select>
       </div>
+
+
+
       <!--<div class="col-md-2">
         <label for="inputZip" class="form-label">Zip</label>
         <input type="text" class="form-control" id="inputZip">

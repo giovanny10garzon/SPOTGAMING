@@ -310,3 +310,16 @@ class TipoOperacion(models.Model):
 
     def __str__(self):
         return self.Operacionnombre()
+
+class StatusAsignacion(models.Model):
+    nombre = models.CharField(max_length=100)
+    activo = models.IntegerField(default=1, null=True)
+    eliminar = models.IntegerField(default=0, null=True)
+    create_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
+    update_at = models.DateTimeField(auto_now=True, verbose_name="Editado")
+
+    def StatusAsignar(self):
+        return  "{}".format(self.nombre)
+
+    def __str__(self):
+        return self.StatusAsignar()

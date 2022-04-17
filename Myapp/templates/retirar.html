@@ -5,18 +5,18 @@
 
 
 
-  <h1> Asignar Maquinas</h1>
+  <h1> Retirar Maquinas</h1>
   <p></p>
 <form class="row g-3">
       <div class="col-md-6">
-        <label for="inputnumero" class="form-label">Numero_ASG:</label>
-        <input type="email" class="form-control" id="inputnumero">
+        <label for="inputnumero" class="form-label">Numero_RTO:</label>
+        <input type="text" class="form-control" id="inputnumero">
       </div>
       <div class="col-md-6">
         <label for="inputfecharegistro" class="form-label">Fecha registro:</label>
         <input type="date" class="form-control" id="inputfecharegistro">
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6">
         <label for="inputcliente" class="form-label">Cliente:</label><br>
             <select class="col-md-12" id="inputcliente" class="form-selec">
                 <option>-------------------------</option>
@@ -27,24 +27,50 @@
       </div>
 
       <div class="col-md-6">
-        <label for="inputfechaasginacion" class="form-label">Fecha asignación:</label>
+        <label for="inputfechaasginacion" class="form-label">Fecha retiro:</label>
         <input type="date" class="form-control" id="inputfechaasginacion" >
       </div>
-      <div class="col-md-4">
-        <label for="modalidad" class="form-label">Modalidad:</label>
-        <select id="modalidad" class="form-select">
-            <option selected>-------------------</option>
-            <option >SOLO PARTICIPACION</option>
-            <option >PARTICIPACION CON OPC COMPRA</option>
-            <option >VENTA CON PARTICIPACION</option>
-            <option >VENTA SIN PARTICIPACION</option>
-            <option >VENTA CON CUOTA FIJA</option>
-            <option >ARRENDAIENTO MENSUAL</option>
-        </select>
-      </div>
+
       <div class="col-md-6">
         <label for="inputcontacto" class="form-label">Contacto:</label>
         <input type="text" class="form-control" id="inputcontacto">
+      </div>
+      <div class="col-md-6">
+        <label for="inputfechaingreso" class="form-label">Fecha recibido bodega:</label>
+        <input type="date" class="form-control" id="inputfechaingreso" >
+      </div>
+      <div class="col-md-6">
+        <label for="inputrecibidopor" class="form-label">Recibido por:</label>
+        <input type="text" class="form-control" id="inputrecibidopor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputfechaums" class="form-label">Fecha procesado UMS:</label>
+        <input type="date" class="form-control" id="inputfechaums" >
+      </div>
+      <div class="col-md-6">
+        <label for="inputconductor" class="form-label">Conductor:</label>
+        <input type="text" class="form-control" id="inputconductor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputguia" class="form-label">Guia de envio:</label>
+        <input type="text" class="form-control" id="inputguia">
+      </div>
+      <div class="col-md-6">
+        <label for="inputplaca" class="form-label">Placa:</label>
+        <input type="text" class="form-control" id="inputplaca">
+      </div>
+      <div class="col-md-4">
+        <label for="inputformatransporte" class="form-label">Forma de envío:</label>
+        <select id="inputformatransporte" class="form-select">
+                <option selected>-------------------</option>
+                {% for Transporte in transportes %}
+                    <option value="{{Transporte.nombre}}"> {{Transporte.nombre}} </option>
+                {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputumsresponsable" class="form-label">UMS Responsable:</label>
+        <input type="text" class="form-control" id="inputumsresponsable">
       </div>
       <div class="col-md-4">
         <label for="inputState" class="form-label">Status:</label>
@@ -53,10 +79,9 @@
                 {% for Asignacione in asignaciones %}
                     <option value="{{Asignacione.stado}}"> {{Asignacione.stado}} </option>
                 {% endfor %}
-
-
         </select>
       </div>
+
       <!--<div class="col-md-2">
         <label for="inputZip" class="form-label">Zip</label>
         <input type="text" class="form-control" id="inputZip">
@@ -82,7 +107,7 @@
 				<input type="button" value="Reporte">
 				<input type="button" value="Imprimir">
 				<input type="submit" value="Guardar">
-				<a href="{% url 'listaasignacion'%}" type="button">Cerrar</a>
+				<input type="button" value="Cerrar">
       </fieldset>
        </center>
 

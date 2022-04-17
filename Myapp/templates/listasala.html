@@ -1,0 +1,139 @@
+
+{% extends 'menumaestro.html' %}
+{% load crispy_forms_tags %}
+{% block content%}
+
+<fieldset id="borde" xmlns="http://www.w3.org/1999/html">
+    <h5>  Maestro de Salas / Puntos </h5>
+ </fieldset>
+<p></p>
+<br>
+<br>
+
+
+<form class="row g-3">
+            <!--<div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>--!>
+<style type="text/css">
+    th {
+        text-align: center;
+    }
+</style>
+        <table class="table table-bordered" id="cliente">
+        <thead>
+            <tr>
+
+                <th scope="col">Codigo</th>
+                <th scope="col">Inspired</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Cliente</th>
+                <!--<th scope="col">Razon Social</th>--!>
+                <th scope="col" colspan="3">Estado
+                    (activo/Liq./%)</th>
+                <th scope="col">Opciones</th>
+             </tr>
+        </thead>
+            <tbody>
+                <tr>
+
+                    <td  WIDTH="120" HEIGHT="120">
+                        {% for Sala in clientes %}
+                            <input  type="text" class="form-control" value="{{Sala.id_codigo}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="80" HEIGHT="80">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.id_inspired}}" readonly onmousedown="return false;" name="clienteconectar">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="200" HEIGHT="200">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.nombre}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="180" HEIGHT="180">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.ciudad}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.clientes}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <!--<td WIDTH="50" HEIGHT="50">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.razon}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>--!>
+                    <td WIDTH="35" HEIGHT="35">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.activo}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="35" HEIGHT="35">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.liquida}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="43" HEIGHT="43">
+                        {% for Sala in clientes %}
+                            <input type="text" class="form-control" value="{{Sala.porcentaje}}" readonly onmousedown="return false;">
+                        {% endfor %}
+                    </td>
+                    <td WIDTH="140" HEIGHT="140">
+                        {% for Cliente in clientes %}
+                            <a href="{% url 'instalar'%}" type="button" class="btn btn-danger">Editar</a>  <button type="button" class="btn btn-danger">Ver</button>
+                        {% endfor %}
+                    </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var table = $('#cliente').DataTable({
+                    orderCellsTop: true,
+                    fixedHeader: true
+                });
+            });
+
+            /*$('#cliente thead tr').clone(true).appendTo( '#cliente thead' );
+
+            $('#cliente thead tr:eq(1) th').each( function (i) {
+                var title = $(this).text(); //es el nombre de la columna
+                $(this).html( '<input type="text" placeholder="Search...'+title+'" />' );
+
+                $( 'input', this ).on( 'keyup change', function () {
+                    if ( table.column(i).search() !== this.value ) {
+                        table
+                            .column(i)
+                            .search( this.value )
+                            .draw();
+                     }
+                } );
+             } );*/
+
+
+        </script>
+      <p></p>
+</form>
+{% endblock%}
